@@ -4,8 +4,7 @@
  * Hardware:
  *   - APKLVSR ESP32-CAM + ESP32-CAM MB
  *   - OV5640 120-degree camera module
- *   - Xicoolee Solar Power Manager (5V-24V MPPT) with 16540 battery holder
- *     (POWO18B 18650 cells fit with a 16540→18650 adapter sleeve)
+ *   - Xicoolee Solar Power Manager (5V-24V MPPT) with 18650 battery holder
  *   - POWO18B rechargeable 18650 batteries
  *   - Generic 5V 500mA solar panel
  *   - Camway IP67 enclosure

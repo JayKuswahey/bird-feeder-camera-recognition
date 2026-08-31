@@ -5,8 +5,8 @@
 | Component | Details |
 |-----------|---------|
 | Solar panel | Generic 5 V / 500 mA (bare +/− wires) |
-| Power manager | Xicoolee Solar Energy/Power Manager, 5 V–24 V input, MPPT, 16540 battery holder, JST output |
-| Battery | POWO18B 18650 rechargeable cells (fit the 16540 holder with a 16540→18650 sleeve if needed) |
+| Power manager | Xicoolee Solar Energy/Power Manager, 5 V–24 V input, MPPT, 18650 battery holder, JST output |
+| Battery | POWO18B 18650 rechargeable cells |
 | Microcontroller | APKLVSR ESP32-CAM + ESP32-CAM MB breakout board |
 | Camera | OV5640, 120° FOV, mounted on the ESP32-CAM |
 | Enclosure | Camway IP67 storage box |
@@ -49,9 +49,7 @@ under 50 mA — comfortable for the panel output even on partly cloudy days.
 
 ## Battery notes
 
-- The Xicoolee holder is labelled "16540"; 18650 cells (POWO18B) are slightly
-  longer (65 mm vs 54 mm).  Use a 16540→18650 adapter sleeve or verify your
-  specific Xicoolee model accepts 18650 before inserting.
+- The Xicoolee holder accepts standard 18650 cells; insert the POWO18B cells directly.
 - The MPPT controller will cut off charging when the cell is full and resume
   when solar energy is available; no additional protection circuitry is needed.
 - The firmware reads the raw battery voltage via a resistor divider on GPIO 33
