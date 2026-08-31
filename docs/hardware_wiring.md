@@ -3,18 +3,20 @@
 ## Component list
 
 | Component | Details |
-|-----------|---------|
-| Solar panel | Generic 5 V / 500 mA (bare +/− wires) |
-| Power manager | Xicoolee Solar Energy/Power Manager, 5 V–24 V input, MPPT, 18650 battery holder, JST output |
-| Battery | POWO18B 18650 rechargeable cells |
-| Enclosure | Camway IP67 storage box |
-| Microcontroller | APKLVSR ESP32-CAM + ESP32-CAM MB breakout board |
-| Camera | OV5640, 120° FOV, mounted on the ESP32-CAM |
+|:-----------|:---------|
+| Solar panel | [Generic 5V 500mA panels](https://www.amazon.nl/-/en/dp/B08RJV9JSG), Plus/Minus cable out |
+| Power manager |[Xicoolee Solar Energy/Power Manager 5V-24V](https://www.amazon.nl/-/en/dp/B0BC1BN7T9) with MPPT and 18650 battery holder, Plus/Minus cable in, JST out |
+| Battery | [POWO18B rechargeable](https://www.amazon.nl/dp/B0DS5JSVX4) 18650 batteries |
+| Enclosure | [Camway IP67 storage box](https://www.amazon.nl/-/en/dp/B0G13FBN6W) |
+| Microcontroller | [APKLVSR ESP32-CAM + ESP32-CAM MB WiFi/BT + ESP32 DC 5V](https://www.amazon.nl/-/en/dp/B0CHY9S2RK) |
+| Camera | [OV5640 120deg camera](https://www.amazon.nl/-/en/dp/B0GW2NGQBW?ref=ppx_yo2ov_dt_b_fed_asin_title)  |
 | Enclosure ESP32-CAM | [Found on Makerworld](https://makerworld.com/en/models/1239253-smart-bird-feeder-with-integrated-wifi-camera) | 
 
 ---
 
 ## Wiring overview
+
+![Schematic](.images/ESP32-CAM-solar-battery.png)
 
 ```
 Solar panel (+) ──► Xicoolee IN+
