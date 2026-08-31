@@ -7,9 +7,10 @@
 | Solar panel | Generic 5 V / 500 mA (bare +/− wires) |
 | Power manager | Xicoolee Solar Energy/Power Manager, 5 V–24 V input, MPPT, 18650 battery holder, JST output |
 | Battery | POWO18B 18650 rechargeable cells |
+| Enclosure | Camway IP67 storage box |
 | Microcontroller | APKLVSR ESP32-CAM + ESP32-CAM MB breakout board |
 | Camera | OV5640, 120° FOV, mounted on the ESP32-CAM |
-| Enclosure | Camway IP67 storage box |
+| Enclosure ESP32-CAM | [Found on Makerworld](https://makerworld.com/en/models/1239253-smart-bird-feeder-with-integrated-wifi-camera) | 
 
 ---
 
@@ -24,7 +25,7 @@ Xicoolee OUT JST (−, GND) ──► ESP32-CAM MB GND pin
 
 Battery voltage sense (optional, for low-battery sleep):
   100 kΩ from VBAT+ ──┬──► GPIO 33 (ADC1_CH5)
-  100 kΩ to GND   ──┘
+  100 kΩ to GND     ──┘
 ```
 
 > **Note:** The ESP32-CAM MB board has a micro-USB socket and 5 V/GND header
@@ -36,7 +37,7 @@ Battery voltage sense (optional, for low-battery sleep):
 ## Power budget
 
 | State | Current draw | Notes |
-|-------|-------------|-------|
+|:-------|:-------------|:-------|
 | Deep sleep | ~5–10 mA | Camera powered down, only RTC active |
 | Wake + capture | ~180–250 mA peak | Camera + WiFi active (~3–5 s) |
 | Idle WiFi | ~80–120 mA | WiFi up, camera off |
@@ -57,13 +58,18 @@ under 50 mA — comfortable for the panel output even on partly cloudy days.
 
 ---
 
-## Enclosure
+## Enclosure Electronics
 
 Mount the solar panel outside the IP67 Camway box with a small cable gland
 (M16 recommended) for the +/− wires entering the box.  Route the wires to the
-Xicoolee board inside the sealed box.  The ESP32-CAM sits in the same box with
-the OV5640 lens pointing through a small hole sealed with a clear silicone dome
-or short acrylic tube sealed with silicone.
+Xicoolee board inside the sealed box.  Use the '5V' JST connector to route a powercable back out through the same cable gland.
+
+---
+
+## Enclosure Camera
+
+The ESP32-CAM sits in the printed bird feeder with the OV5640 lens pointing through a small hole in the faceplate.
+Use an [IP68 rated (bayonet) connector](https://www.prolech.nl/webshop/bedrading/kabelverbinders/12-24v-kabelverbinders/detail/2353/male--female---waterdichte-kabelverbinder---2-aderig---ip68.html) for easy (dis-)connection to the power board.
 
 ---
 
